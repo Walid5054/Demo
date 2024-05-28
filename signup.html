@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Join the Adventure!</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: linear-gradient(
+          to bottom,
+          #f4c270,
+          #f7931a
+        ); /* Unique gradient */
+      }
+
+      .container {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        text-align: left;
+        width: 500px; /* Increased width */
+        max-width: 100%;
+      }
+
+      h1 {
+        color: #fff; /* White for better contrast */
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="password"],
+      input[type="tel"] {
+        display: block;
+        width: 100%;
+        padding: 15px 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+      }
+
+      textarea {
+        display: block;
+        width: 100%;
+        padding: 10px; /* Reduced padding for address */
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+        resize: vertical;
+      }
+
+      .radio-container {
+        /* Changed to radio buttons */
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+      }
+
+      input[type="radio"] {
+        margin-right: 10px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+      }
+
+      .signup-btn {
+        background-color: #f7931a;
+        color: #fff;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+      }
+
+      .signup-btn:hover {
+        background-color: #e07a0a;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Join the Adventure!</h1>
+      <form onsubmit="return validateForm()">
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" placeholder="First Name" required />
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" placeholder="Last Name" required />
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Your Email" required />
+        <label for="phoneNumber">Phone Number (Optional)</label>
+        <input type="tel" id="phoneNumber" placeholder="Phone Number" />
+        <label for="gender">Gender</label>
+        <div class="radio-container">
+          <input type="radio" id="genderMale" name="gender" value="male" />
+          <label for="genderMale">Male</label>
+          <input type="radio" id="genderFemale" name="gender" value="female" />
+          <label for="genderFemale">Female</label>
+        </div>
+        <label for="address">Address</label>
+      </form>
+    </div>
+  </body>
+</html>
